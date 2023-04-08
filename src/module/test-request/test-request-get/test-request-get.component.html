@@ -1,0 +1,40 @@
+<h1>{{ title }}</h1>
+<p>Api PHP</p>
+<hr />
+<div *ngFor="let getProduct of products">
+  <table>
+    <td>{{ getProduct.Product_ID }}</td>
+    <td>{{ getProduct.Product_Name }}</td>
+    <td>{{ getProduct.Product_Price }}</td>
+    <img src="{{ getProduct.Product_Images }}" width="100" height="100" />
+  </table>
+</div>
+<hr />
+<p>Api From www.anapioficeandfire.com</p>
+<!-- ** ตัวแปล Input = myNameInputText -->
+<div>
+  <label for=""> Name: <input type="text" name="" #myNameInputText /></label>
+  <button (click)="searchBookList(myNameInputText.value)">ค้นหา</button>
+</div>
+<div *ngFor="let list_books of books">
+  <table>
+    <td>
+      {{ list_books.isbn }}
+    </td>
+    <td>
+      {{ list_books.numberOfPages }}
+    </td>
+    <td>
+      {{ list_books.name }}
+    </td>
+    <td>
+      {{ list_books.country }}
+    </td>
+    <td>
+      {{ list_books.mediaType }}
+    </td>
+    <td>
+      {{ list_books.released }}
+    </td>
+  </table>
+</div>
